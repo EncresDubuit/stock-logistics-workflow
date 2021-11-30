@@ -27,6 +27,8 @@ jobs:
 env:
   global:
     - VERSION="14.0" TESTS="0" LINT_CHECK="0" MAKEPOT="0"
+    # product_expiry_simple conflicts with product_expiry from the official addons
+    - EXCLUDE=product_expiry_simple
     - MQT_DEP=PIP
 
 install:
